@@ -1,3 +1,5 @@
+LAYOUT: 4food
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
