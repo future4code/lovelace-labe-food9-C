@@ -6,8 +6,9 @@ import LoginPage from "../pages/LoginPage/LoginPage"
 import HomePage from "../pages/HomePage/HomePage"
 import CartPage from "../pages/CartPage/CartPage"
 import SearchRestaurantPage from "../pages/SearchRestaurantPage/SearchRestaurantPage"
-import ProfilePage from "../pages/ProfilePage/ProfilePage"
-
+import OrderHistoryPage from "../pages/OrderHistoryPage/OrderHistoryPage"
+import AdressPage from "../pages/AdressPage/AdressPage"
+import EditUserPage from "../pages/EditUserPage/EditUserPage"
 
 const Router = () => {
     return (
@@ -33,10 +34,19 @@ const Router = () => {
                      <CartPage />
                  </Route>
 
-                 <Route exact path={"/perfil"}>
-                     <ProfilePage />
+                 <Route exact path={"/historico/pedidos"}>
+                     <OrderHistoryPage />
                  </Route>
 
+                 <Route exact path={"/editar/endereco"}>
+                     <AdressPage />
+                 </Route>
+                 
+                 <Route exact path={"/editar/usuario"}>
+                     <EditUserPage />
+                 </Route>
+
+                 
                  <Route exact path={"/pesquisar/restaurante"}>
                      <SearchRestaurantPage />
                  </Route>

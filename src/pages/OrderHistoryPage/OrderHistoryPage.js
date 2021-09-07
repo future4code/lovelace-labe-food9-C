@@ -1,8 +1,8 @@
 import React from "react"
-import { Adress, AdressContainer, Button, Container, Data, DataContainer, HeaderContainer, HistoryContainer, OrderDate, RegisteredAdress, RequestCard, RequestsContainer, Restaurant, Total } from "./styledProfilePage"
+import { Adress, AdressContainer, Button, Container, Data, DataContainer, HeaderContainer, HistoryContainer, OrderDate, RegisteredAdress, RequestCard, RequestsContainer, Restaurant, Total } from "./styledOrderHistory"
 import edit from "../../assets/edit.svg"
 
-const ProfilePage = () => {
+const OrderHistoryPage = () => {
     return (
         <Container>
             <HeaderContainer>
@@ -76,4 +76,4 @@ const ProfilePage = () => {
     )
 }
 
-export default ProfilePage
+export default OrderHistoryPage
