@@ -17,7 +17,7 @@ export const TextOne = styled.span`
 width: 5.438rem;
   height: 1.125rem;
   margin: 0 0.5rem 0 0;
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -34,7 +34,7 @@ export const TextTwo = styled.span`
     width: 5.438rem;
     height: 1.125rem;
     margin: 0 0.5rem;
-    font-family: Roboto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     font-weight: normal;
     font-stretch: normal;
@@ -48,7 +48,7 @@ export const TextThree = styled.span`
   width: 5.438rem;
   height: 1.125rem;
   margin: 0 0.5rem;
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -63,7 +63,7 @@ export const TextFour = styled.span`
   width: 3.688rem;
   height: 1.125rem;
   margin: 0 0 0 0.5rem;
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -77,15 +77,13 @@ export const TextFour = styled.span`
 export const ContainerCard = styled.div`
   width: 22.5rem;
   height: 12.25rem;
-  margin: 1.2rem 0 0;
-  padding: 0.5rem 1rem 0;
+  padding: 0.2rem 1rem 0;
 `
 
 
 export const ContainerBox = styled.div`
   width: 20.5rem;
   height: 11.75rem;
-  padding: 0 0 1rem;
   border-radius: 8px;
   border: solid grey 1px ;
 
@@ -94,7 +92,7 @@ export const TextRestaurante = styled.span`
  width: 18.5rem;
   height: 1.125rem;
   margin: 0.75rem 1rem 0.25rem;
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -123,7 +121,7 @@ export const TimeContainer = styled.span`
  width: 9.25rem;
   height: 1.125rem;
   margin: 0.25rem 0.5rem 0 1rem;
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -136,7 +134,7 @@ export const ContainerTaxa = styled.span`
  width: 8.75rem;
   height: 1.125rem;
   margin: 0.25rem 1rem 0 0.5rem;
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -156,7 +154,7 @@ export const ContainerFooter= styled.div`
 `
 export const AllItens = styled.div`
 display: flex;
-
+object-fit: contain;
 `
 
 export const ItemFooterHome = styled.div`
