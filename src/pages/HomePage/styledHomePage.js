@@ -151,11 +151,16 @@ export const ContainerTaxa = styled.span`
   color: grey;
 `
 export const ContainerFooter= styled.div`
-   width: 22.5rem;
+  width: 22.5rem;
   height: 3.063rem;
   margin: 0.813rem 0 0;
   box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.2), 0 -2px 1px -1px rgba(0, 0, 0, 0.12), 0 -1px 1px 0 rgba(0, 0, 0, 0.14);
   background-color: #fff;
+  
+`
+export const AllItens = styled.div`
+display: flex;
+
 `
 
 export const ItemFooterHome = styled.div`
@@ -165,7 +170,7 @@ export const ItemFooterHome = styled.div`
 `
 
 export const ItemFooterCart = styled.div`
-width: 7.5rem;
+    width: 7.5rem;
     height: 3.062rem;
     padding: 0.625rem 2.875rem 0.625rem 2.938rem;
 `
@@ -177,3 +182,23 @@ export const ItemFooterUser = styled.div`
 `
 
 
+export const IconeHome = styled.img`
+width: 1.688rem;
+  height: 1.688rem;
+  object-fit: contain;
+
+`
+
+export const IconeCart = styled.img`
+width: 1.688rem;
+  height: 1.812rem;
+  object-fit: contain;
+
+`
+
+export const IconeUser = styled.img`
+width: 1.688rem;
+  height: 1.875rem;
+  object-fit: contain;
+  color: red;
+`
