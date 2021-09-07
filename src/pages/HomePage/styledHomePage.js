@@ -77,7 +77,7 @@ export const TextFour = styled.span`
 export const ContainerCard = styled.div`
   width: 22.5rem;
   height: 12.25rem;
-  margin: 3.125rem 0 0;
+  margin: 1.2rem 0 0;
   padding: 0.5rem 1rem 0;
 `
 
@@ -91,11 +91,9 @@ export const ContainerBox = styled.div`
 
   `
 export const TextRestaurante = styled.span`
-     margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 35px;
-    border-right-width: 22px;
-    padding-right: 140px;
+ width: 18.5rem;
+  height: 1.125rem;
+  margin: 0.75rem 1rem 0.25rem;
   font-family: Roboto;
   font-size: 1rem;
   font-weight: normal;
@@ -122,7 +120,7 @@ export const ContainerImg = styled.div`
 `
 
 export const TimeContainer = styled.span`
-  width: 9.25rem;
+ width: 9.25rem;
   height: 1.125rem;
   margin: 0.25rem 0.5rem 0 1rem;
   font-family: Roboto;
@@ -132,9 +130,7 @@ export const TimeContainer = styled.span`
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.39px;
-  color: grey;
-
-
+  color:grey;
 `
 export const ContainerTaxa = styled.span`
  width: 8.75rem;

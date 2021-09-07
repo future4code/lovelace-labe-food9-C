@@ -18,9 +18,24 @@ export const HomePage = () => {
                     <ContainerImg>
                         <ImageContainer src='https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_337714676.jpg?w=1200' alt='foto do sanduba' />
                     </ContainerImg>
-                    <TextRestaurante>Nome do Restaurante</TextRestaurante>
+                        <TextRestaurante>Vinil Restaurante</TextRestaurante>
+                   <AllItens> 
+                       <TimeContainer> 50 - 60 min </TimeContainer>
+                    <ContainerTaxa> Frete R$6,00  </ContainerTaxa></AllItens>
+                </ContainerBox>
+                
+            </ContainerCard>
+
+            <ContainerCard>
+                <ContainerBox>
+                    <ContainerImg>
+                        <ImageContainer src='https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_337714676.jpg?w=1200' alt='foto do sanduba' />
+                    </ContainerImg>
+                    <TextRestaurante>Club da Empada</TextRestaurante>
+                    <AllItens> 
                     <TimeContainer> 50 - 60 min </TimeContainer>
                     <ContainerTaxa> Frete R$6,00  </ContainerTaxa>
+                    </AllItens> 
                 </ContainerBox>
             </ContainerCard>
 
@@ -29,9 +44,11 @@ export const HomePage = () => {
                     <ContainerImg>
                         <ImageContainer src='https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_337714676.jpg?w=1200' alt='foto do sanduba' />
                     </ContainerImg>
-                    <TextRestaurante>Nome do Restaurante</TextRestaurante>
+                    <TextRestaurante>Sempre Comida</TextRestaurante>
+                    <AllItens> 
                     <TimeContainer> 50 - 60 min </TimeContainer>
                     <ContainerTaxa> Frete R$6,00  </ContainerTaxa>
+                    </AllItens> 
                 </ContainerBox>
             </ContainerCard>
 
@@ -40,23 +57,14 @@ export const HomePage = () => {
                     <ContainerImg>
                         <ImageContainer src='https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_337714676.jpg?w=1200' alt='foto do sanduba' />
                     </ContainerImg>
-                    <TextRestaurante>Nome do Restaurante</TextRestaurante>
+                    <TextRestaurante>Dominus</TextRestaurante>
+                    <AllItens> 
                     <TimeContainer> 50 - 60 min </TimeContainer>
                     <ContainerTaxa> Frete R$6,00  </ContainerTaxa>
+                    </AllItens> 
                 </ContainerBox>
             </ContainerCard>
 
-            <ContainerCard>
-                <ContainerBox>
-                    <ContainerImg>
-                        <ImageContainer src='https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_337714676.jpg?w=1200' alt='foto do sanduba' />
-                    </ContainerImg>
-                    <TextRestaurante>Nome do Restaurante</TextRestaurante>
-                    <TimeContainer> 50 - 60 min </TimeContainer>
-                    <ContainerTaxa> Frete R$6,00  </ContainerTaxa>
-                </ContainerBox>
-            </ContainerCard>
-            
             <ContainerFooter>
                 <AllItens>
                     <ItemFooterHome>
