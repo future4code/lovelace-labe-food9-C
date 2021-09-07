@@ -6,6 +6,8 @@ import LoginPage from "../pages/LoginPage/LoginPage"
 import HomePage from "../pages/HomePage/HomePage"
 import CartPage from "../pages/CartPage/CartPage"
 import SearchRestaurantPage from "../pages/SearchRestaurantPage/SearchRestaurantPage"
+import ProfilePage from "../pages/ProfilePage/ProfilePage"
+
 
 const Router = () => {
     return (
@@ -29,6 +31,10 @@ const Router = () => {
                  
                  <Route exact path={"/carrinho"}>
                      <CartPage />
+                 </Route>
+
+                 <Route exact path={"/perfil"}>
+                     <ProfilePage />
                  </Route>
 
                  <Route exact path={"/pesquisar/restaurante"}>
