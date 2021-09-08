@@ -4,6 +4,12 @@ import styled from "styled-components";
 export const ContainerFeed = styled.div`
     width: 22.5rem;
     height: 40rem;
+  
+
+`
+export const MasterContainer = styled.div`
+   max-width: 50vh
+  
 
 `
 
@@ -12,6 +18,11 @@ export const ContainerFiltro = styled.div`
   height: 2.625rem;
   margin: 0.5rem 0 0;
   padding: 0.75rem 0 0.75rem 1rem;
+  overflow:auto;
+
+  ::-webkit-scrollbar { 
+	display: none;
+}
 `
 export const TextOne = styled.span`
 width: 5.438rem;
@@ -78,6 +89,7 @@ export const ContainerCard = styled.div`
   width: 22.5rem;
   height: 12.25rem;
   padding: 0.2rem 1rem 0;
+  display: flex;
 `
 
 
@@ -150,6 +162,7 @@ export const ContainerFooter= styled.div`
   margin: 0.813rem 0 0;
   box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.2), 0 -2px 1px -1px rgba(0, 0, 0, 0.12), 0 -1px 1px 0 rgba(0, 0, 0, 0.14);
   background-color: #fff;
+  margin-bottom: auto;
   
 `
 export const AllItens = styled.div`

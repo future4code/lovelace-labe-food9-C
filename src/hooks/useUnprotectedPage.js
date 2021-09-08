@@ -1,6 +1,6 @@
 import { useHistory } from "react-router"
 import { useLayoutEffect } from "react"
-import { goToSignUp } from "../routes/coordinator"
+import { goToHome} from "../routes/coordinator"
 
 const useUnprotectedPage = () => {
     const history = useHistory()
@@ -8,7 +8,7 @@ const useUnprotectedPage = () => {
     useLayoutEffect(() => {
         const token = localStorage.getItem("token")
         if (token) {
-            goToSignUp(history)
+            goToHome(history)
         }
     })
 }
