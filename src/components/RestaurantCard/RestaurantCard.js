@@ -1,5 +1,9 @@
 import React from "react"
+<<<<<<< HEAD
 import { AllItens, ContainerBox, ContainerCard, ContainerFeed, ContainerFiltro, ContainerFooter, ContainerImg, ContainerTaxa, IconeCart, IconeHome, IconeUser, ImageContainer, ItemFooterCart, ItemFooterHome, ItemFooterUser, TextFour, TextOne, TextRestaurante, TextThree, TextTwo, TimeContainer } from "./styledHomePage"
+=======
+import { AllItens, ContainerBox, ContainerCard, ContainerFeed, ContainerFiltro, ContainerFooter, ContainerImg, ContainerTaxa, IconeCart, IconeHome, IconeUser, ImageContainer, ItemFooterCart, ItemFooterHome, ItemFooterUser, TextFour, TextOne, TextRestaurante, TextThree, TextTwo, TimeContainer } from "./RestauranteCardStyle"
+>>>>>>> 66327a77643150b5c88ae84e8e67dd9619979496
 
 export const RestaurantCard = () => {
  return (
