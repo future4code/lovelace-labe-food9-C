@@ -23,3 +23,6 @@ export const goToRegister = (history) => {
     history.push("/endereco")
 
 }
+export const  goToRestDetail = (history,id) =>{
+    history.push(`/restaurants/${id}`)
+}
