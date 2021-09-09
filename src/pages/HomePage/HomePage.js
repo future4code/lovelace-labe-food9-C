@@ -7,7 +7,7 @@ export const HomePage = () => {
 
     return (
         
-        <RestaurantCard></RestaurantCard>
+        <RestaurantCard/>
 
            
     )
