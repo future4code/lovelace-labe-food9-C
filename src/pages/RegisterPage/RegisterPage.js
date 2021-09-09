@@ -1,20 +1,13 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import useForm from "../../hooks/useForm";
-<<<<<<< HEAD
 import { ContainerRegister, FormRegister, H4, Logo } from "./styledRegisterPage";
-=======
-import { ContainerRegister, FormRegister, H4} from "./styledRegisterPage";
->>>>>>> 66327a77643150b5c88ae84e8e67dd9619979496
 import { Button, CircularProgress } from "@material-ui/core"
 import TextField from '@material-ui/core/TextField';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { useHistory } from "react-router";
 import { goBack } from "../../routes/coordinator";
 import useProtectedPage from "../../hooks/useProtectedPage"
-<<<<<<< HEAD
 import axios from "axios"
-=======
->>>>>>> 66327a77643150b5c88ae84e8e67dd9619979496
 import { BASE_URL } from "../../constants/constants/urls";
 import { registerUser } from "../../services/user";
 
