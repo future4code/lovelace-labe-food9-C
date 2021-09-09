@@ -7,11 +7,6 @@ export const ContainerFeed = styled.div`
   
 
 `
-export const MasterContainer = styled.div`
-   max-width: 50vh
-  
-
-`
 
 export const ContainerFiltro = styled.div`
  width: 22.5rem;
@@ -19,11 +14,11 @@ export const ContainerFiltro = styled.div`
   margin: 0.5rem 0 0;
   padding: 0.75rem 0 0.75rem 1rem;
   overflow:auto;
-
   ::-webkit-scrollbar { 
 	display: none;
 }
 `
+
 export const TextOne = styled.span`
 width: 5.438rem;
   height: 1.125rem;
@@ -126,7 +121,7 @@ export const ContainerImg = styled.div`
   height: 7.5rem;
   margin: 0 0 0.75rem;
   border-radius: 8px;
-  background-color: #d8d8d8;
+  background-color: white;
 `
 
 export const TimeContainer = styled.span`
