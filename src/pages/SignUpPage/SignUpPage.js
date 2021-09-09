@@ -8,15 +8,8 @@ import { useHistory } from "react-router";
 import { goToLogin } from "../../routes/coordinator";
 import { BASE_URL } from "../../constants/constants/urls";
 import { usersSignUp } from "../../services/user";
-<<<<<<< HEAD
 
 export const SignUpPage = () => {
-=======
-import useUnprotectedPage from "../../hooks/useUnprotectedPage";
-
-export const SignUpPage = () => {
-    useUnprotectedPage()
->>>>>>> 66327a77643150b5c88ae84e8e67dd9619979496
     const [form, onChange, clear] = useForm({name: "", email: "", cpf: "", password: ""})
     const history = useHistory()
     const [isLoading, setIsLoading] = useState(false)
