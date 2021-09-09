@@ -11,7 +11,11 @@ export const users = (url, body, clear, history, setIsLoading) => {
       clear()
       setIsLoading(false)
       goToHome(history)
+
+      setIsLoading(false)
+=======
       
+
     })
     .catch((error) => {
       console.log(error.response)
