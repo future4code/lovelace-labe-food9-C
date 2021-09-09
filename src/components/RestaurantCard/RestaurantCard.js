@@ -1,10 +1,9 @@
-import { Category, CategoryOutlined } from "@material-ui/icons"
 import React, { useState } from "react"
 import { useHistory } from "react-router"
 import { BASE_URL } from "../../constants/constants/urls"
 import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
-import { AllItens, ContainerBox, ContainerCard, ContainerFeed, ContainerFiltro, ContainerFooter, ContainerImg, ContainerTaxa, IconeCart, IconeHome, IconeUser, ImageContainer, ItemFooterCart, ItemFooterHome, ItemFooterUser, MasterContainer,TextOne, TextRestaurante,TimeContainer } from "./RestauranteCardStyle"
+import { AllItens, ContainerBox, ContainerCard,ContainerImg, ContainerTaxa, ImageContainer,TextRestaurante,TimeContainer } from "./RestauranteCardStyle"
 
 export const RestaurantCard = () =>{
 useProtectedPage()
