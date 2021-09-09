@@ -10,7 +10,7 @@ const useUnprotectedPage = () => {
         if (token) {
             goToSignUp(history)
         }
-    })
+    },[])
 }
 
 export default useUnprotectedPage
