@@ -9,8 +9,13 @@ export const users = (url, body, clear, history, setIsLoading) => {
     .then((res) => {
       localStorage.setItem('token', res.data.token)
       clear()
-      goToHome(history)
       setIsLoading(false)
+      goToHome(history)
+
+      setIsLoading(false)
+=======
+      
+
     })
     .catch((error) => {
       console.log(error.response)
