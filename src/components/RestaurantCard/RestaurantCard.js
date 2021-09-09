@@ -3,6 +3,7 @@ import { useHistory } from "react-router"
 import { BASE_URL } from "../../constants/constants/urls"
 import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
+import { goToRestDetail } from "../../routes/coordinator"
 import { AllItens, ContainerBox, ContainerCard,ContainerImg, ContainerTaxa, ImageContainer,TextRestaurante,TimeContainer } from "./RestauranteCardStyle"
 
 
@@ -13,6 +14,9 @@ const history = useHistory()
 const category= []
 console.log(category)
 
+const onClickCard = (id) => {
+    goToRestDetail(history, id)
+}
 
 const restaurant = useRequestData([],`${BASE_URL}/fourFoodC/restaurants`)
 console.log(restaurant)
@@ -22,7 +26,7 @@ const cardsOfRestaurant = restaurant && restaurant.map((cards)=>{
     return( 
     <div key = {cards.id}>
         <li>{cards.category}</li>
-            <ContainerCard>
+            <ContainerCard onClick = {()=>onClickCard(cards.id)}>
                 <ContainerBox>
                     <ContainerImg>
                         <ImageContainer  src={cards.logoUrl} alt='Logo'/>
