@@ -3,9 +3,14 @@ import { Button, CircularProgress } from "@material-ui/core"
 import TextField from '@material-ui/core/TextField';
 import { FormLogin, Logo, H4, ContainerLogin } from "./styledLoginPage";
 import useForm from "../../hooks/useForm";
+<<<<<<< HEAD
+import { useHistory } from "react-router";
+import { goToRegister, goToSignUp } from "../../routes/coordinator";
+=======
 import { useHistory } from "react-router-dom";
 import { goToRegister, goToSignUp } from "../../routes/coordinator";
 import { goToSignUp } from "../../routes/coordinator";
+>>>>>>> 66327a77643150b5c88ae84e8e67dd9619979496
 import { BASE_URL } from '../../constants/constants/urls'
 import { users } from "../../services/user";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
