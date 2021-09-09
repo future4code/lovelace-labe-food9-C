@@ -5,6 +5,7 @@ import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
 import { AllItens, ContainerBox, ContainerCard,ContainerImg, ContainerTaxa, ImageContainer,TextRestaurante,TimeContainer } from "./RestauranteCardStyle"
 
+
 export const RestaurantCard = () =>{
 useProtectedPage()
 const history = useHistory()

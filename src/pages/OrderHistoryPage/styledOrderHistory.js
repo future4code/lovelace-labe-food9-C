@@ -101,11 +101,12 @@ export const RequestCard = styled.section`
    height: 16vh;
    justify-content: space-between;
    align-items: center;
+   
 
    p {
-    margin-bottom: -10px;
-    margin: 5px;
-    font-size: 14px;
+   margin-bottom: -10px;
+   margin: 5px;
+   font-size: 14px;
    }
 `
 
