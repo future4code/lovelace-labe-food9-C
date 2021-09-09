@@ -8,6 +8,7 @@ import { useHistory } from "react-router";
 import { goToRegister, goToSignUp } from "../../routes/coordinator";
 =======
 import { useHistory } from "react-router-dom";
+import { goToRegister, goToSignUp } from "../../routes/coordinator";
 import { goToSignUp } from "../../routes/coordinator";
 >>>>>>> 66327a77643150b5c88ae84e8e67dd9619979496
 import { BASE_URL } from '../../constants/constants/urls'
