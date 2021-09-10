@@ -1,9 +1,11 @@
 import React from "react"
-
+import { HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
 
 export const SearchRestaurantPage = () => {
     return (
-        <div>SearchRestaurantPage</div>
+        <div>
+            <HeaderContainer />
+        </div>
     )
 }
 

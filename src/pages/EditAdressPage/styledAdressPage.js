@@ -2,15 +2,16 @@ import styled from "styled-components"
 
 export const FormContainer = styled.form`
    display: flex;
-   height: 100%;
+   height: 85%;
+   /* border: 1px solid black; */
    width: 90%;
    flex-direction: column;
    justify-content: space-evenly;
-   margin: 20px;
+   margin: 15px;
 
    input {
       width: 50%;
-      display: flex;
+      
    }
 
    button {

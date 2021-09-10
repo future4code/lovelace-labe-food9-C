@@ -23,3 +23,15 @@ export const goToRegister = (history) => {
     history.push("/endereco")
 
 }
+
+export const goToOrderHistoryPage = (history) => {
+    history.push("/historico/pedidos")
+}
+
+export const goToEditUserPage = (history) => {
+    history.push("/editar/usuario")
+}
+
+export const goToEditAdressPage = (history) => {
+    history.push("/editar/endereco")
+}
