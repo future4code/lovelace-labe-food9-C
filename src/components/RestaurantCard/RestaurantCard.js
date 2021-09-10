@@ -12,9 +12,14 @@ export const RestaurantCard = () =>{
 useProtectedPage()
 const history = useHistory()
 
+
 const onClickCard = (history,id) => {
     console.log(id)
     goToRestDetail(history, id)
+
+const onClickCard = (history,restaurantId) => {
+    goToRestDetail(history, restaurantId)
+
 }
 
 const restaurant = useRequestData([],`${BASE_URL}/fourFoodC/restaurants`)
