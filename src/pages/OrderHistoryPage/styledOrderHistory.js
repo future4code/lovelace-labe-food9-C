@@ -95,8 +95,6 @@ export const RequestsContainer = styled.section`
    p {
        font-size: 14px;
    }
-<<<<<<< HEAD
-=======
 
    hr {
        width: 90%;
@@ -120,7 +118,6 @@ export const RequestCard = styled.section`
    margin: 5px;
    font-size: 14px;
    }
->>>>>>> master
 `
 
 export const FooterContainer = styled.footer`
