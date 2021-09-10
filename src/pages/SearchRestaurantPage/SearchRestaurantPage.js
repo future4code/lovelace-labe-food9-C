@@ -1,9 +1,5 @@
 import { HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
-
-import React, { useState } from "react"
-
 import React from "react"
->
 import back from "../../assets/back.svg"
 import { BASE_URL } from "../../constants/constants/urls"
 import { TextField } from "@material-ui/core"
@@ -17,8 +13,6 @@ export const SearchRestaurantPage = () => {
     deliveryTime:"",category:""})
 
 
-    
-
     const getRestaurant= (event) => {
         event.preventDefault()
         getRestaurant(`${BASE_URL}/fourFoodC/restaurants`, form, clear,)
@@ -26,26 +20,28 @@ export const SearchRestaurantPage = () => {
 
 
     }
-    return(
-<div>
+
+
+    return (
+           <div>
             <HeaderContainer>
-              <p>Restaurantes</p>
-              <img src={back} alt={"Ícone de voltar"} />
-                </HeaderContainer>
-                <TextField
-            name="Restaurants"
-            type="text"
-            label="Restaurantes"
-            placeholder="Buscar Restaurantes"
-            variant="outlined"
-            value={form.Restaurants}
-            onChange={onChange}
-            required
+                <p>Restaurantes</p>
+                <img src={back} alt={"Ícone de voltar"} />
+            </HeaderContainer>
+            <TextField
+                name="Restaurants"
+                type="text"
+                label="Restaurantes"
+                placeholder="Buscar Restaurantes"
+                variant="outlined"
+                value={form.Restaurants}
+                onChange={onChange}
+                required
             />
-          
-           </div>
+            <recipeRestaurants />
+        </div>
+    )
+}
 
-           
-        )}
+export default SearchRestaurantPage
 
-           export default SearchRestaurantPage

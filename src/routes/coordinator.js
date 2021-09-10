@@ -13,7 +13,6 @@ export const goBack = (history) => {
 
 }
 
-
 export const goToHome = (history) => {
     history.push("/home")
 
@@ -37,11 +36,6 @@ export const goToEditAdressPage = (history) => {
 }
 
 
-export const goToRestDetail = (history,id) => {
-    history.push(`/restaurants/${id}`)
-
-export const goToRestDetail = (history,restaurantId) => {
-    history.push(`/restaurants/${restaurantId}`)
-
-
+export const goToRestDetail = (history, id) => {
+        history.push(`/restaurants/${id}`)
 }
