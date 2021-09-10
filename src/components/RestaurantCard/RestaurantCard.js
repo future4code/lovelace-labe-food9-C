@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from "react"
+import { AllItens, ContainerBox, ContainerCard, ContainerFeed, ContainerFiltro, ContainerFooter, ContainerImg, ContainerTaxa, IconeCart, IconeHome, IconeUser, ImageContainer, ItemFooterCart, ItemFooterHome, ItemFooterUser, TextFour, TextOne, TextRestaurante, TextThree, TextTwo, TimeContainer } from "./styledRestaurantCard"
+=======
 import React, { useState } from "react"
 import { useHistory } from "react-router"
 import { BASE_URL } from "../../constants/constants/urls"
@@ -5,6 +9,7 @@ import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
 import { goToRestDetail } from "../../routes/coordinator"
 import { AllItens, ContainerBox, ContainerCard,ContainerImg, ContainerTaxa, ImageContainer,TextRestaurante,TimeContainer } from "./RestauranteCardStyle"
+>>>>>>> master
 
 
 

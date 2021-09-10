@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from "react"
+import { HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
+=======
 import React, { useState } from "react"
 import {HeaderContainer} from "../OrderHistoryPage/styledOrderHistory"
 import back from "../../assets/back.svg"
@@ -6,6 +10,7 @@ import { TextField } from "@material-ui/core"
 import useForm from "../../hooks/useForm"
 import { useHistory } from "react-router"
 
+>>>>>>> master
 
 export const SearchRestaurantPage = () => {
     const history = useHistory()
@@ -18,6 +23,10 @@ export const SearchRestaurantPage = () => {
     }
     return (
         <div>
+<<<<<<< HEAD
+            <HeaderContainer />
+        </div>
+=======
             <HeaderContainer>
               <p>Restaurantes</p>
               <img src={back} alt={"Ícone de voltar"} />
@@ -34,6 +43,7 @@ export const SearchRestaurantPage = () => {
             />
             <recipeRestaurants />
             </div>
+>>>>>>> master
     )
 }
 export default SearchRestaurantPage
