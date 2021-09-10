@@ -23,3 +23,25 @@ export const goToRegister = (history) => {
     history.push("/endereco")
 
 }
+
+export const goToOrderHistoryPage = (history) => {
+    history.push("/historico/pedidos")
+}
+
+export const goToEditUserPage = (history) => {
+    history.push("/editar/usuario")
+}
+
+export const goToEditAdressPage = (history) => {
+    history.push("/editar/endereco")
+}
+
+
+export const goToRestDetail = (history,id) => {
+    history.push(`/restaurants/${id}`)
+
+export const goToRestDetail = (history,restaurantId) => {
+    history.push(`/restaurants/${restaurantId}`)
+
+
+}

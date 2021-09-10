@@ -9,6 +9,7 @@ export const Container = styled.body`
 export const HeaderContainer = styled.header`
   display: flex;
   height: 8vh;
+  border: 1px solid #eeee;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
@@ -17,7 +18,15 @@ export const HeaderContainer = styled.header`
 
   img {
      position: absolute;
-     margin-right: 85%;
+     margin-right: 82%;
+     margin-left: 65%;
+  }
+
+  button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-right: 82%;
   }
 `
 
@@ -44,6 +53,7 @@ export const Data = styled.section`
       font-size: 14px;
       margin: -10px;
       padding: 10px;
+      font-weight: bold;
   }
 `
 
@@ -110,35 +120,16 @@ export const RequestCard = styled.section`
    }
 `
 
-export const HistoryContainer = styled.div`
-   display: flex;
-   width: 60%;
-   height: 100%;
-   flex-direction: column;
-   justify-content: center;
-`
+export const FooterContainer = styled.footer`
+  display: flex;
+  height: 8vh;
+  border: 1px solid #eeee;
+  margin-top: auto;
+  justify-content: space-evenly;
+  align-items: center;
 
-export const Restaurant = styled.p`
-   color: #e8222e;
-`
-
-export const OrderDate = styled.p`
-   font-size: 5px;
-`
-
-export const Total = styled.p`
-   font-weight: bold;
-`
-
-export const Button = styled.button`
-   display: flex;
-   border: 2px solid white;
-   background-color: #fecf33;
-   border-radius: 20px;
-   width: 32px;
-   height: 32px;
-   justify-content: center;
-   margin-right: 10px;
-   align-items: center;
-   color: white;
+  img {
+    width: 32px;
+    height: 32px;
+  }
 `

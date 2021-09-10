@@ -10,7 +10,9 @@ const useProtectedPage = () => {
         if (!token) {
             goToLogin(history)
         }
-    },)
+
+    },[history])
 }
+
 
 export default useProtectedPage

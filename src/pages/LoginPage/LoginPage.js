@@ -3,8 +3,8 @@ import { Button, CircularProgress } from "@material-ui/core"
 import TextField from '@material-ui/core/TextField';
 import { FormLogin, Logo, H4, ContainerLogin } from "./styledLoginPage";
 import useForm from "../../hooks/useForm";
-import { useHistory } from "react-router-dom";
-import { goToSignUp } from "../../routes/coordinator";
+import { useHistory } from "react-router";
+import {goToSignUp } from "../../routes/coordinator";
 import { BASE_URL } from '../../constants/constants/urls'
 import { users } from "../../services/user";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";

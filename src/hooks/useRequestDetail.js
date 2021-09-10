@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const useRequestData = (initialState, url) => {
+const useRequestDetail = (initialState, url) => {
     const [data, setData] = useState(initialState)
      
     useEffect(() => {
         axios.get(url, {
             headers: {
-   auth: localStorage.getItem("token")
+                 auth: localStorage.getItem("token")
             }
         })
         .then((res) => {
-            setData(res.data.restaurants)
+            setData(res.data.restaurant)
         })
         .catch((err) => {
             console.log(err.response)
@@ -21,4 +21,4 @@ const useRequestData = (initialState, url) => {
     return (data)
 }
 
-export default useRequestData
+export default useRequestDetail

@@ -3,11 +3,9 @@ import { MainContainer, TitleOfTheConatiner, InProgressImg, RestaurantName, SubT
 import clockImage from '../../assets/clock.png'
 const InProgressCard = () => {
 
-    // const [showInProgress, setShowInProgress ] = useState(false)
+    const [showInProgress, setShowInProgress ] = useState(false)
 
-    // useEffect(()=>{
-
-    // },[])
+ 
 
     return (
         <MainContainer>

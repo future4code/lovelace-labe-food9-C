@@ -8,10 +8,8 @@ import { useHistory } from "react-router";
 import { goToLogin } from "../../routes/coordinator";
 import { BASE_URL } from "../../constants/constants/urls";
 import { usersSignUp } from "../../services/user";
-import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 export const SignUpPage = () => {
-    useUnprotectedPage()
     const [form, onChange, clear] = useForm({name: "", email: "", cpf: "", password: ""})
     const history = useHistory()
     const [isLoading, setIsLoading] = useState(false)
@@ -60,7 +58,7 @@ export const SignUpPage = () => {
             variant="outlined"
             value={form.cpf} 
             onChange={onChange}
-            inputProps={{ pattern: "[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" }}
+            inputProps={{pattern:"[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"}}
             required
             />
             <br/>
