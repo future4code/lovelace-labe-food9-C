@@ -7,7 +7,10 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import { useHistory } from "react-router" 
 import { goBack } from "../../routes/coordinator"
 import useProtectedPage from "../../hooks/useProtectedPage"
+
 import axios from "axios"
+
+
 import { BASE_URL } from "../../constants/constants/urls"
 import { registerUser } from "../../services/user"
 

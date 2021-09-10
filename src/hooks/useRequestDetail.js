@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const useRequestData = (initialState, url) => {
+const useRequestDetail = (initialState, url) => {
     const [data, setData] = useState(initialState)
      
     useEffect(() => {
@@ -11,16 +11,14 @@ const useRequestData = (initialState, url) => {
             }
         })
         .then((res) => {
-            setData(res.data.restaurants)
+            setData(res.data.restaurant)
         })
-
-    
-        .catch(() => {
-            alert("Ocorreu um erro, tente novamente!")
+        .catch((err) => {
+            console.log(err.response)
         })
     }, [url])
 
     return (data)
 }
 
-export default useRequestData
+export default useRequestDetail

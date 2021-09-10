@@ -10,7 +10,6 @@ import { useHistory } from "react-router"
 import useProtectedPage from "../../hooks/useProtectedPage"
 import { BASE_URL } from "../../constants/constants/urls"
 import useForm from "../../hooks/useForm"
-import useUpdateData from "../../hooks/useUpdateData"
 import useRequestData from "../../hooks/useRequestData"
 import axios from "axios"
 

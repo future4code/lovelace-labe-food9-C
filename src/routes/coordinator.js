@@ -35,7 +35,7 @@ export const goToEditAdressPage = (history) => {
     history.push("/editar/endereco")
 }
 
+
 export const goToRestDetail = (history, id) => {
         history.push(`/restaurants/${id}`)
-
 }
