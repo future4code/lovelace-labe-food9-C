@@ -8,6 +8,13 @@ import useRequestDetail from "../../hooks/useRequestDetail"
 import { CategoriaNome, ContainerCards, ContainerGeral, ContainerImage, DescricaoProduto, EndText, FreteText, ImagemCards, NomeProduto, PrecoProduto, RestauranteNome, Separador, TempoEntregaTexto, TypeOne } from "./StyleRestauranteDetailPage"
 
 export const RestaurantDetailPage = () => {
+
+useProtectedPage()
+  const params = useParams()
+  console.log(params.id)
+  const detailsRestaurant = useRequestData({},`${BASE_URL}/fourFoodC/restaurants/${params.id}`)
+   console.log(detailsRestaurant)
+
     useProtectedPage()
     const params = useParams()
     const detailsRestaurant = useRequestDetail({}, `${BASE_URL}/fourFoodC/restaurants/${params.restaurantId}`)
@@ -18,6 +25,7 @@ export const RestaurantDetailPage = () => {
 
 
     return (
+
 
         <div>
             <h1>Restaurante</h1>
