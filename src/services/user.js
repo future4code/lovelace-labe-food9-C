@@ -20,34 +20,35 @@ export const users = (url, body, clear, history, setIsLoading) => {
 } 
 
 export const usersSignUp = (url, body, clear, history, setIsLoading) => {
-  // setIsLoading(true)
+  setIsLoading(true)
   axios.post(url, body)
   .then((res) => {
     localStorage.setItem('token', res.data.token)
     clear()
-    // setIsLoading(false)
+    setIsLoading(false)
     goToRegister(history)
   })
   .catch((error) => {
     console.log(error.response)
-    // setIsLoading(false)
+    setIsLoading(false)
   })
 } 
 
 export const registerUser = (url, body, setIsLoading) => {
-  // setIsLoading(true)
+  setIsLoading(true)
   axios.put(url, body, {
     headers: {
          Auth: localStorage.getItem("token")
     }
 })
 .then((res) => {
-  // setIsLoading(false)
+  setIsLoading(false)
+  localStorage.setItem('token', res.data.token)
   alert('Informações salvas com sucesso')
 })
 .catch((error) => {
   console.log(error.response)
-  // setIsLoading(false)
+  setIsLoading(false)
 })
 
 }
