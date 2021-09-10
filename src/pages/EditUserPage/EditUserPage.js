@@ -8,7 +8,6 @@ import IconButton from '@material-ui/core/IconButton'
 import { goToOrderHistoryPage } from "../../routes/coordinator"
 import { useHistory } from "react-router"
 import useProtectedPage from "../../hooks/useProtectedPage"
-import useForm from "../../hooks/useForm"
 
 
 const EditUserPage = () => {

@@ -3,7 +3,7 @@ import axios from "axios"
 
 const useRequestData = (initialState, url) => {
     const [data, setData] = useState(initialState)
-
+     
     useEffect(() => {
         axios.get(url, {
             headers: {
@@ -14,8 +14,6 @@ const useRequestData = (initialState, url) => {
             setData(res.data.restaurants)
         })
         .catch((err) => {
-            console.log(err)
-            alert("Ocorreu um erro, tente novamente!")
             console.log(err.response)
         })
     }, [url])

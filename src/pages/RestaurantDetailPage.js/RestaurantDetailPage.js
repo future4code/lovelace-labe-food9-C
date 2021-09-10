@@ -1,37 +1,15 @@
 import React from "react"
-import { useParams } from "react-router"
+import { useParams } from "react-router-dom"
 import { BASE_URL } from "../../constants/constants/urls"
 import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
 
 export const RestaurantDetailPage = () => {
-    useProtectedPage()
+useProtectedPage()
   const params = useParams()
-  const restaurantes = useRequestData([], `${BASE_URL}/restaurants/${params.restaurantId}`)
-   console.log(restaurantes)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  console.log(params.id)
+  const detailsRestaurant = useRequestData({},`${BASE_URL}/fourFoodC/restaurants/${params.id}`)
+   console.log(detailsRestaurant)
 
 
     return (
