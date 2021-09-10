@@ -13,15 +13,10 @@ const useRequestData = (initialState, url) => {
         .then((res) => {
             setData(res.data.restaurants)
         })
-<<<<<<< HEAD
-    
-        .catch((err) => {
-=======
         .catch((err) => {
             console.log(err)
->>>>>>> master
             alert("Ocorreu um erro, tente novamente!")
-            console.log(err.response.data)
+            console.log(err.response)
         })
     }, [url])
 

@@ -7,8 +7,8 @@ import useRequestData from "../../hooks/useRequestData"
 export const RestaurantDetailPage = () => {
     useProtectedPage()
   const params = useParams()
-  const restaurantes = useRequestData([], `${BASE_URL}/restaurants/${params.id}`)
-console.log(restaurantes)
+  const restaurantes = useRequestData([], `${BASE_URL}/restaurants/${params.restaurantId}`)
+   console.log(restaurantes)
 
 
 
