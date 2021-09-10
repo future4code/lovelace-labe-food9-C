@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -11,6 +11,7 @@ import useProtectedPage from "../../hooks/useProtectedPage"
 import { BASE_URL } from "../../constants/constants/urls"
 import useForm from "../../hooks/useForm"
 import useRequestData from "../../hooks/useRequestData"
+import axios from "axios"
 
 const EditAdressPage = () => {
      useProtectedPage()
@@ -20,15 +21,26 @@ const EditAdressPage = () => {
     
      const [form, onChange] = useForm({street: "", number: "", complement: "", neighbourhood: "", city: "", state: "" })
 
-     const user = useRequestData({}, `${BASE_URL}/fourFoodC/address`, form)
+    //  const user = useRequestData({}, `${BASE_URL}/fourFoodC/address`, form)
 
     //  const updateAdress = useUpdateData({}, `${BASE_URL}/fourFoodC/address`, form)
     //  console.log(updateAdress)
 
+    const getFullAdress = () => {
+        axios.get("https://us-central1-missao-newton.cloudfunctions.net/fourFoodC/address", {
+            headers: {
+                auth: localStorage.getItem("token")
+            }
+        }) 
+    }
+    
+    useEffect(() => {
+        getFullAdress()
+    }, [])
      
      const onSubmitAdress = (event) => {
          event.preventDefault()
-
+         
      }
 
     return (
