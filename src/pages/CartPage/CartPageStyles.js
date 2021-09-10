@@ -113,7 +113,6 @@ export const CheckboxPayment = styled(RadioGroup)`
 
 export const ContainerButton = styled.section`
     width: 90vw;
-    border: 1px solid black;
     display: flex;
     margin: auto;
     margin-top: auto;

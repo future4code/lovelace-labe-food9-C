@@ -1,14 +1,26 @@
+
+import { Button, Checkbox, FormControlLabel, Radio } from "@material-ui/core"
+import { CheckBox } from "@material-ui/icons"
+import React, { useReducer, useState } from "react"
+import { BASE_URL } from "../../constants/constants/urls"
+import { useRequestCart } from "../../hooks/useRequestCart"
 import { Button, FormControlLabel, Radio } from "@material-ui/core"
 import React from "react"
-import { AdressContainer, CheckboxPayment, Container, ContainerButton, Data, HeaderContainer, Pay, PaymentMethods, PricesCart, ServicesCart, SubTotal, Text } from "./CartPageStyles"
+import { AdressContainer, CheckboxPayment, Container,
+        ContainerButton, Data, HeaderContainer, Pay, PaymentMethods,
+        PricesCart, ServicesCart, SubTotal, Text } from "./CartPageStyles"
 
 
 const CartPage = () => {
-    const [value, setValue] = React.useState('female');
+    const [value, setValue] = React.useState('');
+    
 
     const handleChange = (event) => {
       setValue(event.target.value);
     };
+
+    const historic = useRequestCart(`${BASE_URL}/fourFoodC/orders/history`, {})
+    console.log('oi', historic.orders)
 
     return (
         <Container>
@@ -25,7 +37,7 @@ const CartPage = () => {
             </AdressContainer>
 
             <ServicesCart>
-                <Text>Carrinho vazio</Text>
+               {historic.orders && historic.orders.length === 0 || undefined ? <Text> Carrinho vazio</Text> : <p> carrinho cheio</p>}
 
             <PricesCart>
                 <p>Frete R$0,00</p>
