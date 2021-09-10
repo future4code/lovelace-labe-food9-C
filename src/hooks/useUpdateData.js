@@ -1,24 +1,28 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const useRequestData = (initialState, url) => {
+const useUpdateData = (initialState, url, body) => {
     const [data, setData] = useState(initialState)
-     
+
     useEffect(() => {
-        axios.get(url, {
+        axios.put(url, body, {
             headers: {
                  auth: localStorage.getItem("token")
             }
         })
-        .then((res) => {
-            setData(res.data.restaurants)
-        })
-        .catch((err) => {
-            console.log(err.response)
-        })
-    }, [url])
 
-    return (data)
+        .then((res) => {
+            console.log(res.data)
+            setData(res.data)
+        })
+    
+        .catch((err) => {
+            alert("Ocorreu um erro, tente novamente!")
+            console.log(err.response.data)
+        })
+    }, [body, url])
+
+    return data
 }
 
-export default useRequestData
+export default useUpdateData

@@ -4,17 +4,29 @@ import back from "../../assets/back.svg"
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { ContainerForm } from "./styledEditUser"
+import IconButton from '@material-ui/core/IconButton'
+import { goToOrderHistoryPage } from "../../routes/coordinator"
+import { useHistory } from "react-router"
+import useProtectedPage from "../../hooks/useProtectedPage"
 
 
 const EditUserPage = () => {
+    
+    useProtectedPage()
+    const history = useHistory()
+
+    // const [form, onChange] = useForm({})
+
     return (
         <Container>
             <HeaderContainer>
-                <img src={back} alt={"Ícone de voltar"} />
+                <IconButton onClick={() => goToOrderHistoryPage(history)}>
+                    <img src={back} alt={"Ícone de voltar"} />
+                </IconButton>
                 <p>Editar</p>
             </HeaderContainer>
 
-            <ContainerForm>
+            <ContainerForm >
                 <TextField label="Nome" variant="outlined" />
                 <TextField label="E-mail" variant="outlined" />
                 <TextField label="CPF" placeholder="Apto./Bloco" variant="outlined" />

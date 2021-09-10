@@ -1,8 +1,18 @@
 import React from "react"
-import { Adress, AdressContainer, Button, Container, Data, DataContainer, HeaderContainer, HistoryContainer, OrderDate, RegisteredAdress, RequestCard, RequestsContainer, Restaurant, Total } from "./styledOrderHistory"
+import { Adress, AdressContainer, Container, Data, DataContainer, FooterContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
 import edit from "../../assets/edit.svg"
+import avatar from "../../assets/avatar.svg"
+import homepage from "../../assets/homepage.svg"
+import shopping from "../../assets/shopping.svg"
+import RequestsCard from "../../components/RequestsCard/RequestsCard"
+import IconButton from '@material-ui/core/IconButton'
+import { useHistory } from "react-router"
+import { goToEditUserPage, goToEditAdressPage } from "../../routes/coordinator"
 
 const OrderHistoryPage = () => {
+
+    const history = useHistory()
+
     return (
         <Container>
             <HeaderContainer>
@@ -16,7 +26,9 @@ const OrderHistoryPage = () => {
                     <p>333.333.333-33</p>
                 </Data>
 
-                <img src={edit} alt={"Ícone de editar"} />
+                <IconButton onClick={() => goToEditUserPage(history)}>
+                    <img src={edit} alt={"Ícone de editar"} />
+                </IconButton>
             </DataContainer>
 
             <AdressContainer>
@@ -25,53 +37,25 @@ const OrderHistoryPage = () => {
                     <p>Rua Alessandra Vieira, 42 - Santana</p>
                 </Adress>
 
-                <img src={edit} alt={"Ícone de editar"} />
+                <IconButton onClick={() => goToEditAdressPage(history)}>
+                    <img src={edit} alt={"Ícone de editar"} />
+                </IconButton>
             </AdressContainer>
             HomePage
             <RequestsContainer>
                 <p>Histórico de pedidos</p>
             </RequestsContainer>
 
-            <RequestCard>
-                <HistoryContainer>
-                    <Restaurant>Bullguer Vila Madalena</Restaurant>
-                    <OrderDate>39 de outubro 2019</OrderDate>
-                    <Total>SUBTOTAL R$89,00</Total>
-                </HistoryContainer>
+            <RequestsCard />
+            <RequestsCard />
+            <RequestsCard />
+            <RequestsCard />
 
-                <Button>3</Button>
-            </RequestCard>
-
-            <RequestCard>
-                <HistoryContainer>
-                    <Restaurant>Bullguer Vila Madalena</Restaurant>
-                    <OrderDate>39 de outubro 2019</OrderDate>
-                    <Total>SUBTOTAL R$89,00</Total>
-                </HistoryContainer>
-
-                <Button>3</Button>
-            </RequestCard>
-
-            <RequestCard>
-                <HistoryContainer>
-                    <Restaurant>Bullguer Vila Madalena</Restaurant>
-                    <OrderDate>39 de outubro 2019</OrderDate>
-                    <Total>SUBTOTAL R$89,00</Total>
-                </HistoryContainer>
-
-                <Button>3</Button>
-            </RequestCard>
-
-            <RequestCard>
-                <HistoryContainer>
-                    <Restaurant>Bullguer Vila Madalena</Restaurant>
-                    <OrderDate>39 de outubro 2019</OrderDate>
-                    <Total>SUBTOTAL R$89,00</Total>
-                </HistoryContainer>
-
-                <Button>3</Button>
-            </RequestCard>
-
+            <FooterContainer>
+                <img src={homepage} alt={"Ícone da homepage"} />
+                <img src={shopping} alt={"Ícone de shopping-cart"} />
+                <img src={avatar} alt={"Ícone de avatar"} />
+            </FooterContainer>
         </Container>
     )
 }

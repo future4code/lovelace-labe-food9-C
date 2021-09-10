@@ -1,5 +1,4 @@
-import { Button, Checkbox, FormControlLabel, Radio } from "@material-ui/core"
-import { CheckBox } from "@material-ui/icons"
+import { Button, FormControlLabel, Radio } from "@material-ui/core"
 import React from "react"
 import { AdressContainer, CheckboxPayment, Container, ContainerButton, Data, HeaderContainer, Pay, PaymentMethods, PricesCart, ServicesCart, SubTotal, Text } from "./CartPageStyles"
 
