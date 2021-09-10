@@ -13,7 +13,6 @@ export const goBack = (history) => {
 
 }
 
-
 export const goToHome = (history) => {
     history.push("/home")
 
@@ -23,7 +22,6 @@ export const goToRegister = (history) => {
     history.push("/endereco")
 
 }
-<<<<<<< HEAD
 
 export const goToOrderHistoryPage = (history) => {
     history.push("/historico/pedidos")
@@ -35,8 +33,9 @@ export const goToEditUserPage = (history) => {
 
 export const goToEditAdressPage = (history) => {
     history.push("/editar/endereco")
-=======
-export const  goToRestDetail = (history,id) =>{
-    history.push(`/restaurants/${id}`)
->>>>>>> master
+}
+
+export const goToRestDetail = (history, id) => {
+        history.push(`/restaurants/${id}`)
+
 }

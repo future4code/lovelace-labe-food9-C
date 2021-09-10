@@ -6,20 +6,15 @@ import { goToHome, goToRegister } from "../routes/coordinator"
 
 export const users = (url, body, clear, history, setIsLoading) => {
   setIsLoading(true)
-<<<<<<< HEAD
-  axios.post(url, body)
-=======
+
     axios.post(url, body)
->>>>>>> master
     .then((res) => {
       localStorage.setItem('token', res.data.token)
       clear()
       setIsLoading(false)
       goToHome(history)
-<<<<<<< HEAD
       setIsLoading(false)
-=======
->>>>>>> master
+
     })
     .catch((error) => {
       console.log(error.response)
