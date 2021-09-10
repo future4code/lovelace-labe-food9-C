@@ -11,13 +11,19 @@ export const SearchRestaurantPage = () => {
     const history = useHistory()
     const [form, onChange, clear] = useForm({id:"", description:"",shipping:"",address:"",name:"",logoUrl:"",
     deliveryTime:"",category:""})
+
+
+    
+
     const getRestaurant= (event) => {
         event.preventDefault()
-        getRestaurant(`${BASE_URL}/restaurants`, form, clear)
+        getRestaurant(`${BASE_URL}/fourFoodC/restaurants`, form, clear,)
         console.log("res.data")
+
+
     }
-    return (
-        <div>
+    return(
+<div>
             <HeaderContainer>
               <p>Restaurantes</p>
               <img src={back} alt={"Ícone de voltar"} />
@@ -32,8 +38,10 @@ export const SearchRestaurantPage = () => {
             onChange={onChange}
             required
             />
-            <recipeRestaurants />
-            </div>
-    )
-}
-export default SearchRestaurantPage
+          
+           </div>
+
+           
+        )}
+
+           export default SearchRestaurantPage
