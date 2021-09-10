@@ -9,6 +9,7 @@ import SearchRestaurantPage from "../pages/SearchRestaurantPage/SearchRestaurant
 import OrderHistoryPage from "../pages/OrderHistoryPage/OrderHistoryPage"
 import EditAdressPage from "../pages/EditAdressPage/EditAdressPage"
 import EditUserPage from "../pages/EditUserPage/EditUserPage"
+import RestaurantDetailPage from "../pages/RestaurantDetailPage.js/RestaurantDetailPage"
 
 const Router = () => {
     return (
@@ -29,7 +30,11 @@ const Router = () => {
                  <Route exact path={"/home"}>
                      <HomePage />
                  </Route>
-                 
+
+                 <Route exact path={"/restaurants/:restaurantId"}>
+                     <RestaurantDetailPage/>
+                 </Route>
+
                  <Route exact path={"/carrinho"}>
                      <CartPage />
                  </Route>

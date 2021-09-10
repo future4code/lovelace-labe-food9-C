@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from "react"
 import useForm from "../../hooks/useForm"
 import { ContainerRegister, FormRegister, H4, Logo } from "./styledRegisterPage"
+=======
+import React, { useState } from 'react'
+import useForm from "../../hooks/useForm";
+import { ContainerRegister, FormRegister, H4, Logo } from "./styledRegisterPage";
+>>>>>>> master
 import { Button, CircularProgress } from "@material-ui/core"
 import TextField from '@material-ui/core/TextField'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'

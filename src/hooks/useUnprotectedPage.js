@@ -10,7 +10,7 @@ const useUnprotectedPage = () => {
         if (token) {
             goToHome(history)
         }
-    })
+    },)
 }
 
 export default useUnprotectedPage

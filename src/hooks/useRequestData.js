@@ -10,12 +10,16 @@ const useRequestData = (initialState, url) => {
                  auth: localStorage.getItem("token")
             }
         })
-
         .then((res) => {
-            setData(res.data)
+            setData(res.data.restaurants)
         })
+<<<<<<< HEAD
     
         .catch((err) => {
+=======
+        .catch((err) => {
+            console.log(err)
+>>>>>>> master
             alert("Ocorreu um erro, tente novamente!")
             console.log(err.response.data)
         })

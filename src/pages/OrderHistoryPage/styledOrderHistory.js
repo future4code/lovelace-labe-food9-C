@@ -95,6 +95,32 @@ export const RequestsContainer = styled.section`
    p {
        font-size: 14px;
    }
+<<<<<<< HEAD
+=======
+
+   hr {
+       width: 90%;
+       margin-bottom: 50px;
+   }
+`
+
+export const RequestCard = styled.section`
+   display: flex;
+   border-radius: 8px;
+   border: 1px solid #b8b8b8;
+   margin: 10px;
+   width: 90%;
+   height: 16vh;
+   justify-content: space-between;
+   align-items: center;
+   
+
+   p {
+   margin-bottom: -10px;
+   margin: 5px;
+   font-size: 14px;
+   }
+>>>>>>> master
 `
 
 export const FooterContainer = styled.footer`
