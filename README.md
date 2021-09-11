@@ -16,9 +16,9 @@ Nome dos integrantes:
 -Cadastro
 -Feed Restauntes
 -Detalhes e Produtos de cada Restaurante
+-Alterar Endereço e Perfil
 
 ## O que não funciona:
 -Pesquisa dos Restaurantes
 -Enviar para Carrinho Produtos
--Alterar Endereço e Perfil
 -Botoes de Adicionar e Remover produtos
