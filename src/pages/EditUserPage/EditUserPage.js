@@ -4,26 +4,23 @@ import TextField from '@material-ui/core/TextField'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import React from "react"
 import { useHistory } from "react-router"
-import { BASE_URL } from '../../constants/constants/urls'
 import useForm from '../../hooks/useForm'
 import useProtectedPage from "../../hooks/useProtectedPage"
-import useUpdateData from '../../hooks/useUpdateData'
 import { goToHome, goToOrderHistoryPage } from "../../routes/coordinator"
+import { editProfile } from '../../services/user'
 import { Container, HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
 import { ContainerForm } from "./styledEditUser"
 
 const EditUserPage = () => {
     useProtectedPage()
     const history = useHistory()
-    const editProfile = useUpdateData([],`${BASE_URL}/fourFoodC/profile`)
-    const [form, onChange, clear] = useForm({id:'' ,name: "", email: "", cpf: ""})
-    
-    
-    const putUpdateProfile = (event) => {
-        event.preventDefault();
-       editProfile(form, onChange, clear)
-    }
-
+    const [form, onChange, clear] = useForm({name: "", email: "", cpf: ""})
+   
+    const onSubmitForm = (event) => {
+        event.preventDefault()
+        goToOrderHistoryPage(history)
+        editProfile(form, history,clear)
+      }
 
 
 
@@ -35,35 +32,35 @@ const EditUserPage = () => {
                 </IconButton>
                 <p>Editar</p>
             </HeaderContainer>
-            <ContainerForm onSubmit={putUpdateProfile}>
+            <ContainerForm onSubmit={onSubmitForm}>
                 <TextField 
-                name ='name' 
-                label ="Nome" 
-                type="text"
-                 placeholder="Nome" 
+                name ={'name'} 
+                label ={"Nome" }
+                type={"text"}
+                 placeholder={"Nome"} 
                  variant="outlined" 
                  value={form.name} 
                  onChange={onChange}  />
                 
                 <TextField 
-                name ='email' 
-                label ="Email" 
-                type="email" 
-                placeholder="Email" 
+                name ={'email'} 
+                label ={"Email" }
+                type={"email" }
+                placeholder={"Email" }
                 variant="outlined" 
                 value={form.email} 
                 onChange={onChange} />
                 
                 <TextField 
-                name ='cpf' 
-                label ="cpf" 
-                type="number" 
-                placeholder= "cpf" 
-                variant="outlined" 
+                name ={'cpf' }
+                label ={"CPF" }
+                type={"number" }
+                placeholder= "000.000.000-00"
+                variant={"outlined" }
                 value={form.cpf} 
                 onChange={onChange} />
 
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" type={"submit"}> 
                     Salvar
                 </Button>
             </ContainerForm>

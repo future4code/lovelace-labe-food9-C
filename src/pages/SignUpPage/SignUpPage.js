@@ -25,7 +25,6 @@ export const SignUpPage = () => {
         <div>
        <Button onClick={() => goToLogin(history)}> <ArrowBackIosIcon/> </Button>
         <ContainerSignUp>
-        
             <Logo src="https://cdn.zeplin.io/5dd5ab8e5fb2a0060f81698f/assets/2420CEFD-BBDE-49C8-91E3-A49B116851E9.svg" alt="logo"/>
             <H4>Cadastrar</H4>
             <FormSignUp onSubmit={onSubmitSignUp}>

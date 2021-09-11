@@ -1,4 +1,5 @@
 import axios from "axios"
+import { BASE_URL } from "../constants/constants/urls"
 import { goToHome, goToOrderHistoryPage, goToRegister } from "../routes/coordinator"
 
 export const users = (url, body, clear, history, setIsLoading) => {
@@ -57,3 +58,34 @@ export const registerUser = (url, body, history, setIsLoading) => {
 
 }
 
+export const addAdress = (body,history) => {
+  axios
+  .put(`${BASE_URL}/fourFoodC/address`, body, {
+      headers: {
+          auth: localStorage.getItem("token")
+      }
+  })
+  .then((response) => {
+      localStorage.setItem("token", response.data.token)
+      goToOrderHistoryPage(history)
+  })
+  .catch((error) => {
+      console.log(error.message)
+  })
+}
+
+export const editProfile = (body,history) => {
+  axios
+  .put(`${BASE_URL}/fourFoodC/profile`, body, {
+      headers: {
+          auth: localStorage.getItem("token")
+      }
+  })
+  .then((res) => { 
+    console.log(res.data.user)
+      goToOrderHistoryPage(history)
+  })
+  .catch((error) => {
+      console.log(error.message)
+  })
+}

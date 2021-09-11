@@ -1,41 +1,27 @@
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import TextField from '@material-ui/core/TextField'
-import axios from "axios"
-import React, { useEffect } from "react"
+import React from "react"
 import { useHistory } from "react-router"
 import back from "../../assets/back.svg"
 import useForm from "../../hooks/useForm"
-import useProtectedPage from "../../hooks/useProtectedPage"
+import useProtectedPage from '../../hooks/useProtectedPage'
 import { ContainerRegister, FormRegister } from "../../pages/RegisterPage/styledRegisterPage"
 import { goToOrderHistoryPage } from "../../routes/coordinator"
+import { addAdress } from '../../services/user'
 import { HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
 
 const EditAdressPage = () => {
-     useProtectedPage()
-
-   
-     const history = useHistory()
-    
-     const [form, onChange] = useForm({street: "", number: "", complement: "", neighbourhood: "", city: "", state: "" })
-
-    const getFullAdress = () => {
-        axios.get("https://us-central1-missao-newton.cloudfunctions.net/fourFoodC/address", {
-            headers: {
-                auth: localStorage.getItem("token")
-            }
-        }) 
+    useProtectedPage()
+    const history = useHistory()
+    const [form, onChange, clear] = useForm({street: "",number: "",neighbourhood: "",city: "",state: "", complement: ""})
+  
+    const onSubmitForm = (event) => {
+      event.preventDefault()
+      goToOrderHistoryPage(history)
+      addAdress(form, clear, onChange)
     }
-    
-    useEffect(() => {
-        getFullAdress()
-    }, [])
-     
-     const onSubmitAdress = (event) => {
-         event.preventDefault()
-         
-     }
-
+ 
     return (
         <ContainerRegister>
 
@@ -47,7 +33,7 @@ const EditAdressPage = () => {
             </HeaderContainer>
 
 
-            <FormRegister onSubmit={onSubmitAdress}>
+            <FormRegister onSubmit={onSubmitForm}>
                 <TextField
                     name="street"
                     type="text"

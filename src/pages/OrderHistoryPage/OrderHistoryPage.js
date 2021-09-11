@@ -7,7 +7,6 @@ import RequestsCard from "../../components/RequestsCard/RequestsCard"
 import { BASE_URL } from '../../constants/constants/urls'
 import useProfileRequest from '../../hooks/useProfileRequest'
 import useProtectedPage from '../../hooks/useProtectedPage'
-import useRequestData from '../../hooks/useRequestData'
 import { goToEditAdressPage, goToEditUserPage } from "../../routes/coordinator"
 import { Adress, AdressContainer, Container, Data, DataContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
 
@@ -17,9 +16,6 @@ const OrderHistoryPage = () => {
     const profileUsers = useProfileRequest({},`${BASE_URL}/fourFoodC/profile`)
      console.log(profileUsers)
 
-
-
-     
     return (
         <Container>
             <HeaderContainer>
