@@ -1,14 +1,11 @@
-import { HeaderContainer } from "../OrderHistoryPage/styledOrderHistory"
-import React from "react"
-import back from "../../assets/back.svg"
-import { BASE_URL } from "../../constants/constants/urls"
 import { TextField } from "@material-ui/core"
+import React from "react"
+import { HeaderAll } from "../../constants/constants/Header"
+import { BASE_URL } from "../../constants/constants/urls"
 import useForm from "../../hooks/useForm"
-import { useHistory } from "react-router"
 
 
 export const SearchRestaurantPage = () => {
-    const history = useHistory()
     const [form, onChange, clear] = useForm({id:"", description:"",shipping:"",address:"",name:"",logoUrl:"",
     deliveryTime:"",category:""})
 
@@ -21,24 +18,21 @@ export const SearchRestaurantPage = () => {
 
     }
 
-
     return (
            <div>
-            <HeaderContainer>
+            <HeaderAll > 
                 <p>Restaurantes</p>
-                <img src={back} alt={"Ícone de voltar"} />
-            </HeaderContainer>
+            </HeaderAll>
             <TextField
                 name="Restaurants"
                 type="text"
                 label="Restaurantes"
                 placeholder="Buscar Restaurantes"
                 variant="outlined"
-                value={form.Restaurants}
+                value={form.getRestaurant}
                 onChange={onChange}
                 required
             />
-            <recipeRestaurants />
         </div>
     )
 }

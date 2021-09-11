@@ -15,6 +15,7 @@ const Router = () => {
     return (
         <BrowserRouter>
              <Switch>
+             
                  <Route exact path={"/"}>
                      <LoginPage />
                  </Route>

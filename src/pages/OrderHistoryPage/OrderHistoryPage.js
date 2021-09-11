@@ -1,13 +1,11 @@
-import React from "react"
-import { Adress, AdressContainer, Container, Data, DataContainer, FooterContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
-import edit from "../../assets/edit.svg"
-import avatar from "../../assets/avatar.svg"
-import homepage from "../../assets/homepage.svg"
-import shopping from "../../assets/shopping.svg"
-import RequestsCard from "../../components/RequestsCard/RequestsCard"
 import IconButton from '@material-ui/core/IconButton'
+import React from "react"
 import { useHistory } from "react-router"
-import { goToEditUserPage, goToEditAdressPage } from "../../routes/coordinator"
+import edit from "../../assets/edit.svg"
+import Footer from "../../components/Footer/Footer"
+import RequestsCard from "../../components/RequestsCard/RequestsCard"
+import { goToEditAdressPage, goToEditUserPage } from "../../routes/coordinator"
+import { Adress, AdressContainer, Container, Data, DataContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
 
 const OrderHistoryPage = () => {
 
@@ -50,12 +48,7 @@ const OrderHistoryPage = () => {
             <RequestsCard />
             <RequestsCard />
             <RequestsCard />
-
-            <FooterContainer>
-                <img src={homepage} alt={"Ícone da homepage"} />
-                <img src={shopping} alt={"Ícone de shopping-cart"} />
-                <img src={avatar} alt={"Ícone de avatar"} />
-            </FooterContainer>
+              <Footer/>
         </Container>
     )
 }

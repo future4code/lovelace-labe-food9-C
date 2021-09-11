@@ -54,9 +54,5 @@ export const registerUser = (url, body, setIsLoading) => {
   setIsLoading(false)
 })
 
-<<<<<<< HEAD
 }
 
-=======
-}
->>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b

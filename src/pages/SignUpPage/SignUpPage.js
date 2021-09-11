@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import useForm from "../../hooks/useForm";
-import { Button, CircularProgress } from "@material-ui/core"
+import { Button, CircularProgress } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
-import { ContainerSignUp, FormSignUp, H4, Logo } from "./styledSignUpPage";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import React, { useState } from "react";
 import { useHistory } from "react-router";
-import { goToLogin } from "../../routes/coordinator";
 import { BASE_URL } from "../../constants/constants/urls";
+import useForm from "../../hooks/useForm";
+import { goToLogin } from "../../routes/coordinator";
 import { usersSignUp } from "../../services/user";
+import { ContainerSignUp, FormSignUp, H4, Logo } from "./styledSignUpPage";
 
 export const SignUpPage = () => {
     const [form, onChange, clear] = useForm({name: "", email: "", cpf: "", password: ""})
@@ -58,7 +58,7 @@ export const SignUpPage = () => {
             variant="outlined"
             value={form.cpf} 
             onChange={onChange}
-            inputProps={{pattern:"[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"}}
+            inputProps={{pattern:"[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"}}
             required
             />
             <br/>
