@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import useForm from "../../hooks/useForm";
-import { Button, CircularProgress } from "@material-ui/core"
+import { Button, CircularProgress } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
-import { ContainerSignUp, FormSignUp, H4, Logo } from "./styledSignUpPage";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import React, { useState } from "react";
 import { useHistory } from "react-router";
-import { goToLogin } from "../../routes/coordinator";
 import { BASE_URL } from "../../constants/constants/urls";
+import useForm from "../../hooks/useForm";
+import { goToLogin } from "../../routes/coordinator";
 import { usersSignUp } from "../../services/user";
+import { ContainerSignUp, FormSignUp, H4, Logo } from "./styledSignUpPage";
 
 export const SignUpPage = () => {
     const [form, onChange, clear] = useForm({name: "", email: "", cpf: "", password: ""})
@@ -25,7 +25,6 @@ export const SignUpPage = () => {
         <div>
        <Button onClick={() => goToLogin(history)}> <ArrowBackIosIcon/> </Button>
         <ContainerSignUp>
-        
             <Logo src="https://cdn.zeplin.io/5dd5ab8e5fb2a0060f81698f/assets/2420CEFD-BBDE-49C8-91E3-A49B116851E9.svg" alt="logo"/>
             <H4>Cadastrar</H4>
             <FormSignUp onSubmit={onSubmitSignUp}>

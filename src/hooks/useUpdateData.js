@@ -3,9 +3,8 @@ import axios from "axios"
 
 const useUpdateData = (initialState, url, body) => {
     const [data, setData] = useState(initialState)
-
     useEffect(() => {
-        axios.put(url, body, {
+        axios.put(url,body,{
             headers: {
                  auth: localStorage.getItem("token")
             }
@@ -13,16 +12,15 @@ const useUpdateData = (initialState, url, body) => {
 
         .then((res) => {
             console.log(res.data)
-            setData(res.data)
+            setData(res.data.user)
         })
     
         .catch((err) => {
-            alert("Ocorreu um erro, tente novamente!")
             console.log(err.response.data)
         })
-    }, [body, url])
+    }, [url],[body])
 
-    return data
+    return (data)
 }
 
 export default useUpdateData

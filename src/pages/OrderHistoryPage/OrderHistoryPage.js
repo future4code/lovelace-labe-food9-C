@@ -1,17 +1,20 @@
-import React from "react"
-import { Adress, AdressContainer, Container, Data, DataContainer, FooterContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
-import edit from "../../assets/edit.svg"
-import avatar from "../../assets/avatar.svg"
-import homepage from "../../assets/homepage.svg"
-import shopping from "../../assets/shopping.svg"
-import RequestsCard from "../../components/RequestsCard/RequestsCard"
 import IconButton from '@material-ui/core/IconButton'
+import React from "react"
 import { useHistory } from "react-router"
-import { goToEditUserPage, goToEditAdressPage } from "../../routes/coordinator"
+import edit from "../../assets/edit.svg"
+import Footer from "../../components/Footer/Footer"
+import RequestsCard from "../../components/RequestsCard/RequestsCard"
+import { BASE_URL } from '../../constants/constants/urls'
+import useProfileRequest from '../../hooks/useProfileRequest'
+import useProtectedPage from '../../hooks/useProtectedPage'
+import { goToEditAdressPage, goToEditUserPage } from "../../routes/coordinator"
+import { Adress, AdressContainer, Container, Data, DataContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
 
 const OrderHistoryPage = () => {
-
+    useProtectedPage()
     const history = useHistory()
+    const profileUsers = useProfileRequest({},`${BASE_URL}/fourFoodC/profile`)
+     console.log(profileUsers)
 
     return (
         <Container>
@@ -21,9 +24,9 @@ const OrderHistoryPage = () => {
 
             <DataContainer>
                 <Data>
-                    <p>Bruna Oliveira</p>
-                    <p>bruna@gmail.com</p>
-                    <p>333.333.333-33</p>
+                    <p>{profileUsers.name}</p>
+                    <p>{profileUsers.email}</p>
+                    <p>{profileUsers.cpf}</p>
                 </Data>
 
                 <IconButton onClick={() => goToEditUserPage(history)}>
@@ -34,14 +37,13 @@ const OrderHistoryPage = () => {
             <AdressContainer>
                 <Adress>
                     <RegisteredAdress>Endereço cadastrado</RegisteredAdress>
-                    <p>Rua Alessandra Vieira, 42 - Santana</p>
+                    <p>{profileUsers.address}</p>
                 </Adress>
 
                 <IconButton onClick={() => goToEditAdressPage(history)}>
                     <img src={edit} alt={"Ícone de editar"} />
                 </IconButton>
             </AdressContainer>
-            HomePage
             <RequestsContainer>
                 <p>Histórico de pedidos</p>
             </RequestsContainer>
@@ -50,12 +52,7 @@ const OrderHistoryPage = () => {
             <RequestsCard />
             <RequestsCard />
             <RequestsCard />
-
-            <FooterContainer>
-                <img src={homepage} alt={"Ícone da homepage"} />
-                <img src={shopping} alt={"Ícone de shopping-cart"} />
-                <img src={avatar} alt={"Ícone de avatar"} />
-            </FooterContainer>
+            <Footer />
         </Container>
     )
 }

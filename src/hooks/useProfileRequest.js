@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const useRequestData = (initialState, url) => {
+const useProfileRequest = (initialState, url) => {
     const [data, setData] = useState(initialState)
      
     useEffect(() => {
@@ -11,7 +11,7 @@ const useRequestData = (initialState, url) => {
             }
         })
         .then((res) => {
-            setData(res.data.restaurants)
+            setData(res.data.user)
         })
 
     
@@ -23,4 +23,4 @@ const useRequestData = (initialState, url) => {
     return (data)
 }
 
-export default useRequestData
+export default useProfileRequest

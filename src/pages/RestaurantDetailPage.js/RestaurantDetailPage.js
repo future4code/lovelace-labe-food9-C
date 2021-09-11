@@ -1,36 +1,31 @@
 import { Button } from "@material-ui/core"
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
+import { HeaderAll } from "../../constants/constants/Header"
 import { BASE_URL } from "../../constants/constants/urls"
-<<<<<<< HEAD
 import useProtectedPage from "../../hooks/useProtectedPage"
-=======
-import useProtectedPage from "../../hooks/useProtectedPage";
->>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
 import useRequestDetail from "../../hooks/useRequestDetail"
-import { CategoriaNome, ContainerCards, ContainerGeral, ContainerImage, DescricaoProduto, EndText, FreteText, ImagemCards, NomeProduto, PrecoProduto, RestauranteNome, Separador, TempoEntregaTexto, TypeOne } from "./StyleRestauranteDetailPage"
+import { goToHome } from "../../routes/coordinator"
+import { CategoriaNome, ContainerCards, ContainerGeral, ContainerImage, DescricaoProduto, EndText, FreteText, NomeProduto, PrecoProduto, RestauranteNome, Separador, TempoEntregaTexto, TypeOne } from "./StyleRestauranteDetailPage"
 
 export const RestaurantDetailPage = () => {
-<<<<<<< HEAD
-=======
-
->>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
     useProtectedPage()
+    const history= useHistory()
     const params = useParams()
-
+    
     const detailsRestaurant = useRequestDetail({}, `${BASE_URL}/fourFoodC/restaurants/${params.restaurantId}`)
     console.log(detailsRestaurant)
+    
 
 
-<<<<<<< HEAD
 
     return (
-=======
-    return (
-
->>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
         <div>
-            <h1>Restaurante</h1>
+            <HeaderAll > 
+                <ArrowBackIosIcon onClick={() => goToHome(history)}/>
+                <p>Restaurante</p>
+            </HeaderAll>
             <ContainerGeral>
                 <div>
                     <ContainerImage src={detailsRestaurant.logoUrl} alt='Logo Restaurante' />
