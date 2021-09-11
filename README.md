@@ -7,7 +7,8 @@ Nome dos integrantes:
 -Felipe Melo
 -Ivan Gomes
 
-### Link do Surge: https://labefood-9.surge.sh/
+### Link do Surge: https://food-labe9-c.surge.sh/
+
 
 
 ## O que funciona:
