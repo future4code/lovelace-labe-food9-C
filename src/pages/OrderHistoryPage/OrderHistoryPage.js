@@ -4,13 +4,22 @@ import { useHistory } from "react-router"
 import edit from "../../assets/edit.svg"
 import Footer from "../../components/Footer/Footer"
 import RequestsCard from "../../components/RequestsCard/RequestsCard"
+import { BASE_URL } from '../../constants/constants/urls'
+import useProfileRequest from '../../hooks/useProfileRequest'
+import useProtectedPage from '../../hooks/useProtectedPage'
+import useRequestData from '../../hooks/useRequestData'
 import { goToEditAdressPage, goToEditUserPage } from "../../routes/coordinator"
 import { Adress, AdressContainer, Container, Data, DataContainer, HeaderContainer, RegisteredAdress, RequestsContainer } from "./styledOrderHistory"
 
 const OrderHistoryPage = () => {
-
+    useProtectedPage()
     const history = useHistory()
+    const profileUsers = useProfileRequest({},`${BASE_URL}/fourFoodC/profile`)
+     console.log(profileUsers)
 
+
+
+     
     return (
         <Container>
             <HeaderContainer>
@@ -19,9 +28,9 @@ const OrderHistoryPage = () => {
 
             <DataContainer>
                 <Data>
-                    <p>Bruna Oliveira</p>
-                    <p>bruna@gmail.com</p>
-                    <p>333.333.333-33</p>
+                    <p>{profileUsers.name}</p>
+                    <p>{profileUsers.email}</p>
+                    <p>{profileUsers.cpf}</p>
                 </Data>
 
                 <IconButton onClick={() => goToEditUserPage(history)}>
@@ -32,14 +41,13 @@ const OrderHistoryPage = () => {
             <AdressContainer>
                 <Adress>
                     <RegisteredAdress>Endereço cadastrado</RegisteredAdress>
-                    <p>Rua Alessandra Vieira, 42 - Santana</p>
+                    <p>{profileUsers.address}</p>
                 </Adress>
 
                 <IconButton onClick={() => goToEditAdressPage(history)}>
                     <img src={edit} alt={"Ícone de editar"} />
                 </IconButton>
             </AdressContainer>
-            HomePage
             <RequestsContainer>
                 <p>Histórico de pedidos</p>
             </RequestsContainer>
@@ -48,7 +56,7 @@ const OrderHistoryPage = () => {
             <RequestsCard />
             <RequestsCard />
             <RequestsCard />
-              <Footer/>
+            <Footer />
         </Container>
     )
 }

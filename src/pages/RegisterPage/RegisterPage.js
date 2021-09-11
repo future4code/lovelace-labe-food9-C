@@ -6,7 +6,7 @@ import { useHistory } from "react-router"
 import { BASE_URL } from "../../constants/constants/urls"
 import useForm from "../../hooks/useForm"
 import useProtectedPage from "../../hooks/useProtectedPage"
-import { goBack } from "../../routes/coordinator"
+import { goBack, goToHome } from "../../routes/coordinator"
 import { registerUser } from "../../services/user"
 import { ContainerRegister, FormRegister, H4 } from "./styledRegisterPage"
 
@@ -28,7 +28,7 @@ export const RegisterPage = () => {
     }
 
     const register = () => {
-        registerUser(`${BASE_URL}/fourFoodC/address`, form, clear, setIsLoading)
+        registerUser(`${BASE_URL}/fourFoodC/address`, form, clear, history, setIsLoading)
     }
     
 

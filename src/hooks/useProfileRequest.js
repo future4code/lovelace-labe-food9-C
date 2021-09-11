@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const useUpdateData = (initialState, url, body) => {
+const useProfileRequest = (initialState, url) => {
     const [data, setData] = useState(initialState)
+     
     useEffect(() => {
-        axios.put(url,body,{
+        axios.get(url, {
             headers: {
-                 auth: localStorage.getItem("token")
+     auth: localStorage.getItem("token")
             }
         })
-
         .then((res) => {
-            console.log(res.data)
             setData(res.data.user)
         })
+
     
-        .catch((err) => {
-            console.log(err.response.data)
+        .catch(() => {
+            alert("Ocorreu um erro, tente novamente!")
         })
-    }, [url],[body])
+    }, [url])
 
     return (data)
 }
 
-export default useUpdateData
+export default useProfileRequest

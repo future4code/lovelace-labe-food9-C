@@ -58,7 +58,7 @@ export const SignUpPage = () => {
             variant="outlined"
             value={form.cpf} 
             onChange={onChange}
-            inputProps={{pattern:"[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"}}
+            inputProps={{pattern:"[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"}}
             required
             />
             <br/>

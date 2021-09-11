@@ -1,5 +1,5 @@
 import axios from "axios"
-import { goToHome, goToRegister } from "../routes/coordinator"
+import { goToHome, goToOrderHistoryPage, goToRegister } from "../routes/coordinator"
 
 export const users = (url, body, clear, history, setIsLoading) => {
   setIsLoading(true)
@@ -36,7 +36,7 @@ export const usersSignUp = (url, body, clear, history, setIsLoading) => {
 } 
 
 
-export const registerUser = (url, body, setIsLoading) => {
+export const registerUser = (url, body, history, setIsLoading) => {
   setIsLoading(true)
   axios.put(url, body, {
     headers: {
@@ -48,6 +48,7 @@ export const registerUser = (url, body, setIsLoading) => {
   setIsLoading(false)
   localStorage.setItem('token', res.data.token)
   alert('Informações salvas com sucesso')
+  goToHome(history)
 })
 .catch((error) => {
   console.log(error.response)
