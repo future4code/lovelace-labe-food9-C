@@ -7,37 +7,10 @@ import { goToRestDetail } from "../../routes/coordinator"
 import { AllItens, ContainerBox, ContainerCard, ContainerImg, ContainerTaxa, ImageContainer, TextRestaurante, TimeContainer } from "./styledRestaurantCard"
 
 
-
-export const RestaurantCard = () => {
-    useProtectedPage()
-    const history = useHistory()
-
-    const onClickCard = (id) => {
-        goToRestDetail(history, id)
-    }
-
-    const restaurant = useRequestData([], `${BASE_URL}/fourFoodC/restaurants`)
-    console.log(restaurant)
-
-
-    const cardsOfRestaurant = restaurant && restaurant.map((cards) => {
-        return (
-            <div key={cards.id}>
-                <li>{cards.category}</li>
-                <ContainerCard onClick={() => onClickCard(cards.id)}>
-                    <ContainerBox>
-                        <ContainerImg>
-                            <ImageContainer src={cards.logoUrl} alt='Logo' />
-                        </ContainerImg>
-
 export const RestaurantCard = () =>{
 useProtectedPage()
 const history = useHistory()
 
-
-const onClickCard = (history,id) => {
-    console.log(id)
-    goToRestDetail(history, id)
 
 const onClickCard = (history,restaurantId) => {
     goToRestDetail(history, restaurantId)
@@ -45,7 +18,6 @@ const onClickCard = (history,restaurantId) => {
 }
 
 const restaurant = useRequestData([],`${BASE_URL}/fourFoodC/restaurants`)
-console.log(restaurant)
 
 
 const cardsOfRestaurant = restaurant && restaurant.map((cards)=>{
