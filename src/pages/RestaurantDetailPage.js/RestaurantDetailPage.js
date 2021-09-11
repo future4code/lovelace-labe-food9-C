@@ -2,30 +2,47 @@ import { Button } from "@material-ui/core"
 import React from "react"
 import { useParams } from "react-router-dom"
 import { BASE_URL } from "../../constants/constants/urls"
+<<<<<<< HEAD
 import useProtectedPage from "../../hooks/useProtectedPage"
+=======
+import useProtectedPage from "../../hooks/useProtectedPage";
+>>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
 import useRequestDetail from "../../hooks/useRequestDetail"
 import { CategoriaNome, ContainerCards, ContainerGeral, ContainerImage, DescricaoProduto, EndText, FreteText, ImagemCards, NomeProduto, PrecoProduto, RestauranteNome, Separador, TempoEntregaTexto, TypeOne } from "./StyleRestauranteDetailPage"
 
 export const RestaurantDetailPage = () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
     useProtectedPage()
     const params = useParams()
+
     const detailsRestaurant = useRequestDetail({}, `${BASE_URL}/fourFoodC/restaurants/${params.restaurantId}`)
     console.log(detailsRestaurant)
 
 
+<<<<<<< HEAD
 
     return (
+=======
+    return (
+
+>>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
         <div>
             <h1>Restaurante</h1>
             <ContainerGeral>
                 <div>
                     <ContainerImage src={detailsRestaurant.logoUrl} alt='Logo Restaurante' />
                 </div>
+
+
                 <div>
                     <RestauranteNome>
                         {detailsRestaurant.name && detailsRestaurant.name}
                     </RestauranteNome>
                 </div>
+
                 <div>
                     <CategoriaNome>{detailsRestaurant.category && detailsRestaurant.category}</CategoriaNome>
                 </div>
@@ -38,6 +55,7 @@ export const RestaurantDetailPage = () => {
                 </div >
                      <TypeOne>Refeições</TypeOne>
                      <Separador/>
+
                    <ContainerCards>
                 {/* <ImagemCards src={detailsRestaurant.products && detailsRestaurant.products[0].photoUrl} alt="Foto do rango"/> */}
                 <div>

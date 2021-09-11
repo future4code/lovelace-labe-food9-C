@@ -6,8 +6,12 @@ import useRequestData from "../../hooks/useRequestData"
 import { goToRestDetail } from "../../routes/coordinator"
 import { AllItens, ContainerBox, ContainerCard, ContainerImg, ContainerTaxa, ImageContainer, TextRestaurante, TimeContainer } from "./styledRestaurantCard"
 
+<<<<<<< HEAD
 
 export const RestaurantCard = () =>{
+=======
+const RestaurantCard = () =>{
+>>>>>>> 26c833448c012a8754de8512d4e49ff33cf4756b
 useProtectedPage()
 const history = useHistory()
 
@@ -48,4 +52,4 @@ const cardsOfRestaurant = restaurant && restaurant.map((cards)=>{
     )
 }
 
-export default RestaurantCard
+export default RestaurantCard;
